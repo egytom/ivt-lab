@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# IVT Spaceship v1.1
->>>>>>> branch-B
+# IVT Spaceship v1.0
 
 This is a sample application for the [Integration and Verification Techniques](http://www.mit.bme.hu/oktatas/targyak/vimiac04) course at BME MIT.
 
