@@ -2,9 +2,10 @@ package hu.bme.mit.spaceship;
 
 import java.util.Random;
 
+//Szukseges valtozasok amiket a tarsamtol kaptam!
+
 /**
 * Class storing and managing the torpedoes of a ship
-*
 * (Deliberately contains bugs.)
 */
 public class TorpedoStore {
@@ -28,20 +29,20 @@ public class TorpedoStore {
     }
   }
 
-  public boolean fire(int numberOfTorpedos){
+  private Random generator = new Random();
+  public boolean fire(int numberOfTorpedos) throws IllegalArgumentException {
     if(numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount){
-      new IllegalArgumentException("numberOfTorpedos");
+      	throw new IllegalArgumentException("numberOfTorpedos");
     }
 
     boolean success = false;
 
     // simulate random overheating of the launcher bay which prevents firing
-    Random generator = new Random();
-    double r = generator.nextDouble();
+    double r = this.generator.nextDouble();
 
     if (r >= FAILURE_RATE) {
       // successful firing
-      this.torpedoCount =- numberOfTorpedos;
+      this.torpedoCount = -numberOfTorpedos;
       success = true;
     } else {
       // simulated failure
