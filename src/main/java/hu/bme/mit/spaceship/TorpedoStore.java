@@ -2,6 +2,8 @@ package hu.bme.mit.spaceship;
 
 import java.util.Random;
 
+//Szukseges valtozasok amiket a tarsamtol kaptam!
+
 /**
 * Class storing and managing the torpedoes of a ship
 * (Deliberately contains bugs.)
